@@ -76,7 +76,7 @@
 
 - GitHub: [@yessetkr21](https://github.com/yessetkr21)
 - Email: yessetkr2190@gmail.com 
-- Solicitud para solicitar codigo
+- Solicitud para enviar codigo
 
 ### Los contenedores no inician:
 ```bash
