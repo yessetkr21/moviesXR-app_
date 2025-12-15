@@ -17,7 +17,8 @@
 - **MongoDB Atlas** - Base de datos NoSQL en la nube para usuarios y watchlist
 - **Mongoose** - ODM para MongoDB
 - **Firebase Authentication** - Autenticación de usuarios con Google
-- **YouTube Data API** - Integración de trailers de peliculas
+- **TMDB API** - Catálogo de películas y metadatos
+- **YouTube Data API** - Integración de trailers
 - **Axios** - Cliente HTTP para comunicación entre servicios
 
 ### Frontend
@@ -45,6 +46,9 @@
 - **Movies Service** - Catálogo de películas con integración TMDB
 - **Auth Service** - Autenticación centralizada con Firebase
 - **Watchlist Service** - Lista de películas favoritas con MongoDB
+- **Profiles Service** 🆕 - Gestión de perfiles (máx. 5 por cuenta, estilo Netflix)
+- **Recommendations Service** 🆕 - Recomendaciones personalizadas basadas en gustos
+- **Reviews Service** 🆕 - Calificaciones (⭐1-5) y reseñas de películas
 
 ### Funcionalidades
 - **Catálogo de películas** - Trending, top rated, categorías por género
@@ -52,6 +56,10 @@
 - **Mi Lista** - Guardar películas favoritas con persistencia en MongoDB
 - **Búsqueda** - Buscar películas por título
 - **Autenticación** - Login con Google mediante Firebase
+- **Perfiles múltiples** 🆕 - Hasta 5 perfiles por cuenta, perfiles infantiles
+- **Recomendaciones personalizadas** 🆕 - "Para ti", "Porque viste X", Top 10
+- **Calificaciones y reseñas** 🆕 - Sistema de 👍👎, estrellas y reseñas escritas
+- **Match personalizado** 🆕 - Porcentaje de compatibilidad por película
 - **Diseño responsivo** - Funciona en desktop, tablet y móvil
 
 ### Seguridad y Autenticación
@@ -63,20 +71,20 @@
 ### Flujo de Datos
 1. Usuario accede a la aplicación - Frontend carga desde API Gateway
 2. Usuario hace login con Google - Firebase autentica y retorna token
-3. Frontend solicita películas - API Gateway enruta a Movies Service
-4. Movies Service consulta a catalogo peliculas - Obtiene datos y trailers
-5. Usuario agrega a Mi Lista - API Gateway enruta a Watchlist Service
-6. Watchlist Service guarda en MongoDB - Datos persistentes
-7. Usuario ve Mi Lista - Se cargan películas guardadas con trailers
-8. Usuario reproduce trailer - Modal con YouTube embed
+3. Usuario selecciona perfil - Profiles Service carga perfiles disponibles
+4. Frontend solicita películas - API Gateway enruta a Movies Service
+5. Movies Service consulta TMDB - Obtiene datos y trailers de YouTube
+6. Sistema genera recomendaciones - Recommendations Service analiza gustos y watchlist
+7. Usuario agrega a Mi Lista - Watchlist Service guarda en MongoDB
+8. Usuario califica película - Reviews Service registra rating (👍👎 o ⭐1-5)
+9. Usuario reproduce trailer - Modal con YouTube embed
 
 ## Contacto
 
 **Yessetk Rodriguez**
 
 - GitHub: [@yessetkr21](https://github.com/yessetkr21)
-- Email: yessetkr2190@gmail.com 
-- Solicitud para enviar codigo
+- Email: yessetkr2190@gmail.com
 
 ### Los contenedores no inician:
 ```bash
@@ -103,3 +111,6 @@ docker-compose logs
 - [Microservices Pattern](https://microservices.io/)
 
 ---
+
+
+
