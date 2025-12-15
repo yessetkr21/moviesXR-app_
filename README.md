@@ -46,9 +46,9 @@
 - **Movies Service** - Catálogo de películas con integración TMDB
 - **Auth Service** - Autenticación centralizada con Firebase
 - **Watchlist Service** - Lista de películas favoritas con MongoDB
-- **Profiles Service** 🆕 - Gestión de perfiles (máx. 5 por cuenta, estilo Netflix)
-- **Recommendations Service** 🆕 - Recomendaciones personalizadas basadas en gustos
-- **Reviews Service** 🆕 - Calificaciones (⭐1-5) y reseñas de películas
+- **Profiles Service**  - Gestión de perfiles (máx. 5 por cuenta, estilo Netflix)
+- **Recommendations Service**  - Recomendaciones personalizadas basadas en gustos
+- **Reviews Service**  - Calificaciones (⭐1-5) y reseñas de películas
 
 ### Funcionalidades
 - **Catálogo de películas** - Trending, top rated, categorías por género
@@ -56,10 +56,10 @@
 - **Mi Lista** - Guardar películas favoritas con persistencia en MongoDB
 - **Búsqueda** - Buscar películas por título
 - **Autenticación** - Login con Google mediante Firebase
-- **Perfiles múltiples** 🆕 - Hasta 5 perfiles por cuenta, perfiles infantiles
-- **Recomendaciones personalizadas** 🆕 - "Para ti", "Porque viste X", Top 10
-- **Calificaciones y reseñas** 🆕 - Sistema de 👍👎, estrellas y reseñas escritas
-- **Match personalizado** 🆕 - Porcentaje de compatibilidad por película
+- **Perfiles múltiples**  - Hasta 5 perfiles por cuenta, perfiles infantiles
+- **Recomendaciones personalizadas**  - "Para ti", "Porque viste X", Top 10
+- **Calificaciones y reseñas**  - Sistema de 👍👎, estrellas y reseñas escritas
+- **Match personalizado**  - Porcentaje de compatibilidad por película
 - **Diseño responsivo** - Funciona en desktop, tablet y móvil
 
 ### Seguridad y Autenticación
