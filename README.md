@@ -10,17 +10,8 @@
 **MoviesXR** is a full-stack web application for streaming movies built with a microservices architecture. The system integrates TMDB catalogs, user authentication, a persistent watchlist, and YouTube trailers, all deployed in the cloud with Render.
 
 ## Captures
-<tr>
-    <td valign="top">
-      <img src="https://github.com/user-attachments/assets/bf724906-8d24-4f84-9701-82ef8936ae98" width="520" />
-    </td>
-    <td valign="top">
-      <img src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" width="250" />
-      <br />
-      <br />
-      <img src="https://github.com/user-attachments/assets/54f09f69-d444-4841-bee1-e3e3127d309c" width="250" />
-    </td>
-  </tr>
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/54f09f69-d444-4841-bee1-e3e3127d309c" />
 
 ## Technologies
 
