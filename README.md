@@ -11,8 +11,8 @@
 
 ## Captures
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/bf724906-8d24-4f84-9701-82ef8936ae98" />
-<img width="400" height="766" alt="image" src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" />
-<img width="400" height="764" alt="image" src="https://github.com/user-attachments/assets/54f09f69-d444-4841-bee1-e3e3127d309c" />
+<img width="400"  alt="image" src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" />
+<img width="400"  alt="image" src="https://github.com/user-attachments/assets/54f09f69-d444-4841-bee1-e3e3127d309c" />
 
 ## Technologies
 
