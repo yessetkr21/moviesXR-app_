@@ -29,7 +29,8 @@
 - **Axios** - HTTP client for communication between services
 
 ### Frontend
-- **Vanilla JavaScript** -  JavaScript
+- **JavaScript** -  JavaScript
+- **React** -  React JS
 - **CSS3** - Animations and responsive design
 - **Firebase SDK** - Client-side authentication
 
