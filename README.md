@@ -1,116 +1,96 @@
 # MoviesXR
 
-**Plataforma de streaming de películas con arquitectura de microservicios con Docker**
+**Movie Streaming Platform with Microservices Architecture using Docker**
 
-### Link del proyecto
+### Project Link
 (https://api-gateway-3bca.onrender.com)
 
-## Sobre el Proyecto
+## About the Project
 
-**MoviesXR** es una aplicación web full-stack de streaming de películas construida con arquitectura de microservicios. El sistema integra catálogos de TMDB, autenticación de usuarios, watchlist persistente y trailers de YouTube, todo desplegado en la nube con Render.
+**MoviesXR** is a full-stack web application for streaming movies built with a microservices architecture. The system integrates TMDB catalogs, user authentication, a persistent watchlist, and YouTube trailers, all deployed in the cloud with Render.
 
-## Tecnologías
+## Captures
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/bf724906-8d24-4f84-9701-82ef8936ae98" />
+<img width="400" height="766" alt="image" src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" />
+<img width="400" height="764" alt="image" src="https://github.com/user-attachments/assets/54f09f69-d444-4841-bee1-e3e3127d309c" />
+
+## Technologies
 
 ### Backend
-- **Node.js** - Entorno de ejecución JavaScript
-- **Express** - Framework web para Node.js
-- **MongoDB Atlas** - Base de datos NoSQL en la nube para usuarios y watchlist
-- **Mongoose** - ODM para MongoDB
-- **Firebase Authentication** - Autenticación de usuarios con Google
-- **TMDB API** - Catálogo de películas y metadatos
-- **YouTube Data API** - Integración de trailers
-- **Axios** - Cliente HTTP para comunicación entre servicios
+- **Node.js** - JavaScript runtime environment
+- **Express** - Web framework for Node.js
+- **MongoDB Atlas** - Cloud-based NoSQL database for users and watchlists
+- **Mongoose** - ODM for MongoDB
+- **Firebase Authentication** - User authentication with Google
+- ** API** - Movie catalog and metadata
+- **YouTube Data API** - Trailer integration
+- **Axios** - HTTP client for communication between services
 
 ### Frontend
-- **Vanilla JavaScript** - Sin frameworks, JavaScript puro
-- **CSS3** - Animaciones y diseño responsivo
-- **Firebase SDK** - Autenticación del lado del cliente
+- **Vanilla JavaScript** - No frameworks, pure JavaScript
+- **CSS3** - Animations and responsive design
+- **Firebase SDK** - Client-side authentication
 
-### Infraestructura
-- **Render** - Plataforma de despliegue en la nube
-- **Docker** - Contenedores para desarrollos de microservicios 
-- **Git/GitHub** - Control de versiones y CI/CD
+### Infrastructure
+- **Render** - Cloud deployment platform
+- **Docker** - Containers for microservices development
+- **Git/GitHub** - Version control and CI/CD
 
-### Herramientas de Desarrollo
-- **dotenv** - Variables de entorno
-- **CORS** - Políticas de origen cruzado
-- **Nodemon** - Auto-reload en desarrollo
+### Development Tools
+- **dotenv** - Environment variables
+- **CORS** - Cross-origin policies
+- **Nodemon** - Auto-reload in development
 
 ---
 
-## Características
+## Features
 
-### Arquitectura de Microservicios
-- **API Gateway** - Punto de entrada único y enrutamiento
-- **Users Service** - Gestión de usuarios y suscripciones
-- **Movies Service** - Catálogo de películas con integración TMDB
-- **Auth Service** - Autenticación centralizada con Firebase
-- **Watchlist Service** - Lista de películas favoritas con MongoDB
-- **Profiles Service**  - Gestión de perfiles (máx. 5 por cuenta, estilo Netflix)
-- **Recommendations Service**  - Recomendaciones personalizadas basadas en gustos
-- **Reviews Service**  - Calificaciones (⭐1-5) y reseñas de películas
+### Microservices Architecture
+- **API Gateway** - Single point of entry and routing
+- **Users Service** - User and subscription management
+- **Movies Service** - Movie catalog with TMDB integration
+- **Auth Service** - Centralized authentication with Firebase
+- **Watchlist Service** - Watchlist with MongoDB
+- **Profiles Service** - Profile management (max. 5 per account, Netflix style)
+- **Recommendations Service** - Personalized recommendations based on preferences
+- **Reviews Service** - Movie ratings (⭐1-5) and reviews
 
-### Funcionalidades
-- **Catálogo de películas** - Trending, top rated, categorías por género
-- **Trailers de YouTube** - Reproducción de trailers en modales
-- **Mi Lista** - Guardar películas favoritas con persistencia en MongoDB
-- **Búsqueda** - Buscar películas por título
-- **Autenticación** - Login con Google mediante Firebase
-- **Perfiles múltiples**  - Hasta 5 perfiles por cuenta, perfiles infantiles
-- **Recomendaciones personalizadas**  - "Para ti", "Porque viste X", Top 10
-- **Calificaciones y reseñas**  - Sistema de 👍👎, estrellas y reseñas escritas
-- **Match personalizado**  - Porcentaje de compatibilidad por película
-- **Diseño responsivo** - Funciona en desktop, tablet y móvil
+### Functionalities
+- **Profiles** - Create profiles for different people at home and save everything in the cloud. Continue Watching, reviews, my list, user profiles and Auth
+- **Movie Catalog** - Trending, top-rated, categories By Genre
+- **YouTube Trailers** - Play trailers in modals
+- **My List** - Save favorite movies persistently in MongoDB
+- **Search** - Search for movies by title
+- **Authentication** - Log in with Google and GitHub using Firebase
+- **Multiple Profiles** - Up to 5 profiles per account, child profiles
+- **Personalized Recommendations** - "For You", "Because You Watched X", Top 10
+- **Ratings and Reviews** - 👍👎 system, stars, and written reviews
+- **Custom Match** - Compatibility percentage per movie
+- **Responsive Design** - Works on desktop, tablet, and mobile
 
-### Seguridad y Autenticación
-- **Firebase Authentication** - Login seguro con Google
-- **JWT Tokens** - Autenticación mediante tokens
-- **Sesiones persistentes** - Mantiene la sesión del usuario
-- **Protección de rutas** - Endpoints protegidos por autenticación
+### Security and Authentication
+- **Firebase Authentication** - Secure login with Google
+- **JWT Tokens** - Authentication using tokens
+- **Persistent Sessions** - Maintains user session
+- **Route Protection** - Endpoints protected by Authentication
 
-### Flujo de Datos
-1. Usuario accede a la aplicación - Frontend carga desde API Gateway
-2. Usuario hace login con Google - Firebase autentica y retorna token
-3. Usuario selecciona perfil - Profiles Service carga perfiles disponibles
-4. Frontend solicita películas - API Gateway enruta a Movies Service
-5. Movies Service consulta TMDB - Obtiene datos y trailers de YouTube
-6. Sistema genera recomendaciones - Recommendations Service analiza gustos y watchlist
-7. Usuario agrega a Mi Lista - Watchlist Service guarda en MongoDB
-8. Usuario califica película - Reviews Service registra rating (👍👎 o ⭐1-5)
-9. Usuario reproduce trailer - Modal con YouTube embed
+### Data Flow
+1. User accesses the application - Frontend loads from API Gateway
+2. User logs in with Google - Firebase authenticates and returns token
+3. User selects profile - Profiles Service loads available profiles
+4. Frontend requests movies - API Gateway routes to Movies Service
+5. Movies Service queries TMDB - Retrieves data and trailers from YouTube
+6. System generates recommendations - Recommendations Service analyzes preferences and watchlist
+7. User adds to My List - Watchlist Service saves to MongoDB
+8. User rates movie - Reviews Service records rating (👍👎 or ⭐1-5)
+9. User plays trailer - Modal with YouTube embed
 
-## Contacto
+## Contact
 
 **Yessetk Rodriguez**
 
 - GitHub: [@yessetkr21](https://github.com/yessetkr21)
 - Email: yessetkr2190@gmail.com
-
-### Los contenedores no inician:
-```bash
-docker-compose down
-docker-compose up --build
-```
-
-### Puerto ya en uso:
-Cambia los puertos en `docker-compose.yml`:
-```yaml
-ports:
-  - "3010:3000"  # Usa 3010 en lugar de 3000
-```
-
-### Ver errores detallados:
-```bash
-docker-compose logs
-```
-
-## 📚 Recursos Adicionales
-
-- [Documentación de Docker](https://docs.docker.com/)
-- [Express.js Guide](https://expressjs.com/)
-- [Microservices Pattern](https://microservices.io/)
-
----
 
 
 
