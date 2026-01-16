@@ -7,7 +7,7 @@
 
 ## About the Project
 
-**MoviesXR** is a full-stack web application for streaming movies built with a microservices architecture. The system integrates TMDB catalogs, user authentication, a persistent watchlist, and YouTube trailers, all deployed in the cloud with Render.
+**MoviesXR** is a full-stack web application for streaming movies built with a microservices architecture. The system integrates TMDB catalogs, user authentication, a persistent watchlist, and movies trailers, all deployed in the cloud with Render.
 
 ## Captures
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/5e1e79d6-789e-4a0a-a5a1-0e36419b85e7" />
@@ -29,7 +29,7 @@
 - **Axios** - HTTP client for communication between services
 
 ### Frontend
-- **Vanilla JavaScript** - No frameworks, pure JavaScript
+- **Vanilla JavaScript** -  JavaScript
 - **CSS3** - Animations and responsive design
 - **Firebase SDK** - Client-side authentication
 
@@ -37,25 +37,7 @@
 - **Render** - Cloud deployment platform
 - **Docker** - Containers for microservices development
 - **Git/GitHub** - Version control and CI/CD
-
-### Development Tools
-- **dotenv** - Environment variables
-- **CORS** - Cross-origin policies
-- **Nodemon** - Auto-reload in development
-
 ---
-
-## Features
-
-### Microservices Architecture
-- **API Gateway** - Single point of entry and routing
-- **Users Service** - User and subscription management
-- **Movies Service** - Movie catalog with TMDB integration
-- **Auth Service** - Centralized authentication with Firebase
-- **Watchlist Service** - Watchlist with MongoDB
-- **Profiles Service** - Profile management (max. 5 per account, Netflix style)
-- **Recommendations Service** - Personalized recommendations based on preferences
-- **Reviews Service** - Movie ratings (⭐1-5) and reviews
 
 ### Functionalities
 - **Profiles** - Create profiles for different people at home and save everything in the cloud. Continue Watching, reviews, my list, user profiles and Auth
@@ -69,6 +51,18 @@
 - **Ratings and Reviews** - 👍👎 system, stars, and written reviews
 - **Custom Match** - Compatibility percentage per movie
 - **Responsive Design** - Works on desktop, tablet, and mobile
+
+- ## Features
+
+### Microservices Architecture
+- **API Gateway** - Single point of entry and routing
+- **Users Service** - User and subscription management
+- **Movies Service** - Movie catalog with TMDB integration
+- **Auth Service** - Centralized authentication with Firebase
+- **Watchlist Service** - Watchlist with MongoDB
+- **Profiles Service** - Profile management (max. 5 per account, Netflix style)
+- **Recommendations Service** - Personalized recommendations based on preferences
+- **Reviews Service** - Movie ratings (⭐1-5) and reviews
 
 ### Security and Authentication
 - **Firebase Authentication** - Secure login with Google
